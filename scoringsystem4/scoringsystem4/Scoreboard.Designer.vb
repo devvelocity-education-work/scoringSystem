@@ -22,9 +22,7 @@ Partial Class Scoreboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnBack = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DGIndividuals = New System.Windows.Forms.DataGridView()
         Me.MemberID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Username = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,26 +40,16 @@ Partial Class Scoreboard
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblAdminAccount = New System.Windows.Forms.Label()
         Me.lblLoggedInAs = New System.Windows.Forms.Label()
-        Me.btnLogOut = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.btnLogOut = New System.Windows.Forms.PictureBox()
         CType(Me.DGIndividuals, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGTeams, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnLogOut, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBack.FlatAppearance.BorderSize = 0
-        Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.ForeColor = System.Drawing.Color.White
-        Me.btnBack.Location = New System.Drawing.Point(42, 39)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(117, 23)
-        Me.btnBack.TabIndex = 16
-        Me.btnBack.Text = "< Back"
-        Me.btnBack.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -73,16 +61,6 @@ Partial Class Scoreboard
         Me.Label1.Size = New System.Drawing.Size(193, 45)
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "Scoreboard"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Image = Global.scoringsystem4.My.Resources.Resources.Event_Scoring_logos_white
-        Me.PictureBox1.Location = New System.Drawing.Point(807, 39)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(189, 103)
-        Me.PictureBox1.TabIndex = 19
-        Me.PictureBox1.TabStop = False
         '
         'DGIndividuals
         '
@@ -179,9 +157,9 @@ Partial Class Scoreboard
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.lblAdminAccount)
         Me.Panel1.Controls.Add(Me.lblLoggedInAs)
-        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Location = New System.Drawing.Point(-2, 804)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1051, 67)
@@ -209,19 +187,38 @@ Partial Class Scoreboard
         Me.lblLoggedInAs.TabIndex = 6
         Me.lblLoggedInAs.Text = "Logged in as [User]"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox3.Image = Global.scoringsystem4.My.Resources.Resources.backbutton
+        Me.PictureBox3.Location = New System.Drawing.Point(42, 40)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(117, 26)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 98
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Image = Global.scoringsystem4.My.Resources.Resources.ES
+        Me.PictureBox2.Location = New System.Drawing.Point(876, 78)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(95, 60)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 55
+        Me.PictureBox2.TabStop = False
+        '
         'btnLogOut
         '
-        Me.btnLogOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLogOut.FlatAppearance.BorderSize = 0
-        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.ForeColor = System.Drawing.Color.White
-        Me.btnLogOut.Location = New System.Drawing.Point(921, 14)
+        Me.btnLogOut.Image = Global.scoringsystem4.My.Resources.Resources.log_out
+        Me.btnLogOut.Location = New System.Drawing.Point(878, 15)
         Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(117, 38)
-        Me.btnLogOut.TabIndex = 4
-        Me.btnLogOut.Text = "Log Out"
-        Me.btnLogOut.UseVisualStyleBackColor = False
+        Me.btnLogOut.Size = New System.Drawing.Size(151, 38)
+        Me.btnLogOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnLogOut.TabIndex = 82
+        Me.btnLogOut.TabStop = False
         '
         'Scoreboard
         '
@@ -229,29 +226,28 @@ Partial Class Scoreboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1048, 869)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.DGTeams)
         Me.Controls.Add(Me.DGIndividuals)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Scoreboard"
         Me.Text = "Scoreboard"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGIndividuals, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGTeams, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnLogOut, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btnBack As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DGIndividuals As DataGridView
     Friend WithEvents MemberID As DataGridViewTextBoxColumn
     Friend WithEvents Username As DataGridViewTextBoxColumn
@@ -269,5 +265,7 @@ Partial Class Scoreboard
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblAdminAccount As Label
     Friend WithEvents lblLoggedInAs As Label
-    Friend WithEvents btnLogOut As Button
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents btnLogOut As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

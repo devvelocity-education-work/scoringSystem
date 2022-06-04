@@ -22,10 +22,8 @@ Partial Class Register
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnBack = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnRegister = New System.Windows.Forms.Button()
         Me.txtBxUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -50,21 +48,13 @@ Partial Class Register
         Me.txtBxAddress = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtBxMedical = New System.Windows.Forms.TextBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBack.FlatAppearance.BorderSize = 0
-        Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.ForeColor = System.Drawing.Color.White
-        Me.btnBack.Location = New System.Drawing.Point(58, 48)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(117, 23)
-        Me.btnBack.TabIndex = 18
-        Me.btnBack.Text = "< Back"
-        Me.btnBack.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -84,21 +74,6 @@ Partial Class Register
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(958, 60)
         Me.Panel1.TabIndex = 20
-        '
-        'btnRegister
-        '
-        Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnRegister.FlatAppearance.BorderSize = 0
-        Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegister.ForeColor = System.Drawing.Color.White
-        Me.btnRegister.Location = New System.Drawing.Point(57, 522)
-        Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(309, 31)
-        Me.btnRegister.TabIndex = 21
-        Me.btnRegister.Text = "Register"
-        Me.btnRegister.UseVisualStyleBackColor = False
         '
         'txtBxUsername
         '
@@ -376,12 +351,47 @@ Partial Class Register
         Me.txtBxMedical.Size = New System.Drawing.Size(309, 70)
         Me.txtBxMedical.TabIndex = 46
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.scoringsystem4.My.Resources.Resources.register
+        Me.PictureBox2.Location = New System.Drawing.Point(58, 501)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(134, 33)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 98
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox3.Image = Global.scoringsystem4.My.Resources.Resources.backbutton
+        Me.PictureBox3.Location = New System.Drawing.Point(58, 39)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(117, 26)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 97
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Image = Global.scoringsystem4.My.Resources.Resources.ES
+        Me.PictureBox1.Location = New System.Drawing.Point(631, 71)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(95, 60)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 48
+        Me.PictureBox1.TabStop = False
+        '
         'Register
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(789, 648)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.txtBxMedical)
         Me.Controls.Add(Me.Label12)
@@ -406,20 +416,19 @@ Partial Class Register
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtBxUsername)
-        Me.Controls.Add(Me.btnRegister)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnBack)
         Me.Name = "Register"
         Me.Text = "Register"
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnBack As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents btnRegister As Button
     Friend WithEvents txtBxUsername As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
@@ -444,4 +453,7 @@ Partial Class Register
     Friend WithEvents txtBxAddress As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents txtBxMedical As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

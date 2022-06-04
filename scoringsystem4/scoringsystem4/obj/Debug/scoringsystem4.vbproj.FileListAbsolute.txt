@@ -1,21 +1,3 @@
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.vbproj.AssemblyReference.cache
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Login.resources
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.HomePage.resources
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Resources.resources
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Scoreboard.resources
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Teams.resources
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.vbproj.GenerateResource.cache
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.vbproj.CoreCompileInputs.cache
-E:\U4 A2\scoringsystem4\scoringsystem4\bin\Debug\scoringsystem4.exe.config
-E:\U4 A2\scoringsystem4\scoringsystem4\bin\Debug\scoringsystem4.exe
-E:\U4 A2\scoringsystem4\scoringsystem4\bin\Debug\scoringsystem4.pdb
-E:\U4 A2\scoringsystem4\scoringsystem4\bin\Debug\scoringsystem4.xml
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.exe
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.xml
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.pdb
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Members.resources
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Register.resources
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.EventsPG.resources
 F:\U4 A2\scoringsystem4\scoringsystem4\bin\Debug\scoringsystem4.exe.config
 F:\U4 A2\scoringsystem4\scoringsystem4\bin\Debug\scoringsystem4.exe
 F:\U4 A2\scoringsystem4\scoringsystem4\bin\Debug\scoringsystem4.pdb
@@ -34,9 +16,7 @@ F:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.vbproj.CoreCompi
 F:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.exe
 F:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.xml
 F:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.pdb
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.forgotpassword.resources
 F:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.forgotpassword.resources
-E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Email.resources
 F:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Email.resources
 H:\scoringsystem4\scoringsystem4\scoringsystem4\bin\Debug\scoringsystem4.exe.config
 H:\scoringsystem4\scoringsystem4\scoringsystem4\bin\Debug\scoringsystem4.exe
@@ -58,3 +38,23 @@ H:\scoringsystem4\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.vbproj.
 H:\scoringsystem4\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.exe
 H:\scoringsystem4\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.xml
 H:\scoringsystem4\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.pdb
+E:\U4 A2\scoringsystem4\scoringsystem4\bin\Debug\scoringsystem4.exe.config
+E:\U4 A2\scoringsystem4\scoringsystem4\bin\Debug\scoringsystem4.exe
+E:\U4 A2\scoringsystem4\scoringsystem4\bin\Debug\scoringsystem4.pdb
+E:\U4 A2\scoringsystem4\scoringsystem4\bin\Debug\scoringsystem4.xml
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.vbproj.AssemblyReference.cache
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Email.resources
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.EventsPG.resources
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.forgotpassword.resources
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Login.resources
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.HomePage.resources
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Members.resources
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Resources.resources
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Register.resources
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Scoreboard.resources
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.Teams.resources
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.vbproj.GenerateResource.cache
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.vbproj.CoreCompileInputs.cache
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.exe
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.xml
+E:\U4 A2\scoringsystem4\scoringsystem4\obj\Debug\scoringsystem4.pdb

@@ -25,12 +25,12 @@ Partial Class Login
         Me.txtBxUsername = New System.Windows.Forms.TextBox()
         Me.txtBxPassword = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnLogin = New System.Windows.Forms.Button()
-        Me.btnRegister = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnForgotPassword = New System.Windows.Forms.Button()
+        Me.btnRegister = New System.Windows.Forms.Button()
+        Me.btnLogin = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,34 +68,6 @@ Partial Class Login
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Login"
         '
-        'btnLogin
-        '
-        Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLogin.FlatAppearance.BorderSize = 0
-        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.Location = New System.Drawing.Point(49, 287)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(117, 23)
-        Me.btnLogin.TabIndex = 3
-        Me.btnLogin.Text = "Login"
-        Me.btnLogin.UseVisualStyleBackColor = False
-        '
-        'btnRegister
-        '
-        Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnRegister.FlatAppearance.BorderSize = 0
-        Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRegister.ForeColor = System.Drawing.Color.White
-        Me.btnRegister.Location = New System.Drawing.Point(172, 287)
-        Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(118, 23)
-        Me.btnRegister.TabIndex = 4
-        Me.btnRegister.Text = "Register"
-        Me.btnRegister.UseVisualStyleBackColor = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -123,11 +95,12 @@ Partial Class Login
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Image = Global.scoringsystem4.My.Resources.Resources.Event_Scoring_logos_white
-        Me.PictureBox1.Location = New System.Drawing.Point(539, 190)
+        Me.PictureBox1.Image = Global.scoringsystem4.My.Resources.Resources.ES
+        Me.PictureBox1.Location = New System.Drawing.Point(627, 214)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(189, 103)
-        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.Size = New System.Drawing.Size(95, 60)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 10
         Me.PictureBox1.TabStop = False
         '
         'btnForgotPassword
@@ -143,6 +116,34 @@ Partial Class Login
         Me.btnForgotPassword.TabIndex = 5
         Me.btnForgotPassword.Text = "Forgot Password?"
         Me.btnForgotPassword.UseVisualStyleBackColor = False
+        '
+        'btnRegister
+        '
+        Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRegister.FlatAppearance.BorderSize = 0
+        Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRegister.ForeColor = System.Drawing.Color.White
+        Me.btnRegister.Location = New System.Drawing.Point(172, 287)
+        Me.btnRegister.Name = "btnRegister"
+        Me.btnRegister.Size = New System.Drawing.Size(118, 23)
+        Me.btnRegister.TabIndex = 4
+        Me.btnRegister.Text = "Register"
+        Me.btnRegister.UseVisualStyleBackColor = False
+        '
+        'btnLogin
+        '
+        Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnLogin.FlatAppearance.BorderSize = 0
+        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
+        Me.btnLogin.Location = New System.Drawing.Point(49, 287)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(117, 23)
+        Me.btnLogin.TabIndex = 3
+        Me.btnLogin.Text = "Login"
+        Me.btnLogin.UseVisualStyleBackColor = False
         '
         'Login
         '
@@ -170,10 +171,10 @@ Partial Class Login
     Friend WithEvents txtBxUsername As TextBox
     Friend WithEvents txtBxPassword As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnLogin As Button
-    Friend WithEvents btnRegister As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnForgotPassword As Button
+    Friend WithEvents btnRegister As Button
+    Friend WithEvents btnLogin As Button
 End Class

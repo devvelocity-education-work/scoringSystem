@@ -2,7 +2,7 @@
 Imports System.Windows.Forms.DataVisualization.Charting
 Public Class Scoreboard
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs)
         HomePage.Show()
         Me.Close()
     End Sub
@@ -197,12 +197,30 @@ Public Class Scoreboard
 
     End Sub
 
-    Private Sub btnLogOut_Click_1(sender As Object, e As EventArgs) Handles btnLogOut.Click
+    Private Sub btnLogOut_Click_1(sender As Object, e As EventArgs)
         If MessageBox.Show("Are you sure you want to log out?", "Confirm", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             Login.Show()
             Login.txtBxUsername.Clear()
             Login.txtBxPassword.Clear()
             Me.Close()
         End If
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        If MessageBox.Show("Are you sure you want to log out?", "Confirm", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            Login.Show()
+            Login.txtBxUsername.Clear()
+            Login.txtBxPassword.Clear()
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        HomePage.Show()
+        Me.Close()
     End Sub
 End Class

@@ -11,9 +11,10 @@
     <AssemblyName>scoringsystem4</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -197,6 +198,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Event Scoring-logos_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scoreboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\events.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\events1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\members.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teams.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send email1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prevbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forgotpa2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forgotpa3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forgotpa4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

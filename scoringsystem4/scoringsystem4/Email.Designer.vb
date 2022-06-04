@@ -25,8 +25,6 @@ Partial Class Email
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblAdminAccount = New System.Windows.Forms.Label()
         Me.lblLoggedInAs = New System.Windows.Forms.Label()
-        Me.btnLogOut = New System.Windows.Forms.Button()
-        Me.btnBack = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtBxFrom = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -39,21 +37,26 @@ Partial Class Email
         Me.txtBxSubject = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtBxBody = New System.Windows.Forms.TextBox()
-        Me.btnSendEmail = New System.Windows.Forms.Button()
         Me.btnSendALL = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.btnSendEmail = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.btnLogOut = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.btnSendEmail, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnLogOut, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.lblAdminAccount)
         Me.Panel1.Controls.Add(Me.lblLoggedInAs)
-        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Location = New System.Drawing.Point(0, 596)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(972, 70)
@@ -80,34 +83,6 @@ Partial Class Email
         Me.lblLoggedInAs.Size = New System.Drawing.Size(127, 19)
         Me.lblLoggedInAs.TabIndex = 6
         Me.lblLoggedInAs.Text = "Logged in as [User]"
-        '
-        'btnLogOut
-        '
-        Me.btnLogOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLogOut.FlatAppearance.BorderSize = 0
-        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.ForeColor = System.Drawing.Color.White
-        Me.btnLogOut.Location = New System.Drawing.Point(829, 14)
-        Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(117, 38)
-        Me.btnLogOut.TabIndex = 4
-        Me.btnLogOut.Text = "Log Out"
-        Me.btnLogOut.UseVisualStyleBackColor = False
-        '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBack.FlatAppearance.BorderSize = 0
-        Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.ForeColor = System.Drawing.Color.White
-        Me.btnBack.Location = New System.Drawing.Point(37, 35)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(117, 23)
-        Me.btnBack.TabIndex = 75
-        Me.btnBack.Text = "< Back"
-        Me.btnBack.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -255,20 +230,6 @@ Partial Class Email
         Me.txtBxBody.Size = New System.Drawing.Size(616, 124)
         Me.txtBxBody.TabIndex = 86
         '
-        'btnSendEmail
-        '
-        Me.btnSendEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnSendEmail.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSendEmail.FlatAppearance.BorderSize = 0
-        Me.btnSendEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSendEmail.ForeColor = System.Drawing.Color.White
-        Me.btnSendEmail.Location = New System.Drawing.Point(46, 500)
-        Me.btnSendEmail.Name = "btnSendEmail"
-        Me.btnSendEmail.Size = New System.Drawing.Size(117, 23)
-        Me.btnSendEmail.TabIndex = 88
-        Me.btnSendEmail.Text = "Send Email"
-        Me.btnSendEmail.UseVisualStyleBackColor = False
-        '
         'btnSendALL
         '
         Me.btnSendALL.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -295,16 +256,6 @@ Partial Class Email
         Me.Label7.TabIndex = 90
         Me.Label7.Text = "Send to every member"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Image = Global.scoringsystem4.My.Resources.Resources.Event_Scoring_logos_white
-        Me.PictureBox1.Location = New System.Drawing.Point(737, 185)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(189, 103)
-        Me.PictureBox1.TabIndex = 91
-        Me.PictureBox1.TabStop = False
-        '
         'Label8
         '
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -315,17 +266,62 @@ Partial Class Email
         Me.Label8.TabIndex = 92
         Me.Label8.Text = "Email"
         '
+        'btnSendEmail
+        '
+        Me.btnSendEmail.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSendEmail.Image = Global.scoringsystem4.My.Resources.Resources.send_email
+        Me.btnSendEmail.Location = New System.Drawing.Point(46, 488)
+        Me.btnSendEmail.Name = "btnSendEmail"
+        Me.btnSendEmail.Size = New System.Drawing.Size(126, 31)
+        Me.btnSendEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnSendEmail.TabIndex = 95
+        Me.btnSendEmail.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Image = Global.scoringsystem4.My.Resources.Resources.backbutton
+        Me.PictureBox1.Location = New System.Drawing.Point(46, 39)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(117, 26)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 94
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Image = Global.scoringsystem4.My.Resources.Resources.ES
+        Me.PictureBox2.Location = New System.Drawing.Point(786, 218)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(95, 60)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 93
+        Me.PictureBox2.TabStop = False
+        '
+        'btnLogOut
+        '
+        Me.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnLogOut.Image = Global.scoringsystem4.My.Resources.Resources.log_out
+        Me.btnLogOut.Location = New System.Drawing.Point(795, 14)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(151, 38)
+        Me.btnLogOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnLogOut.TabIndex = 94
+        Me.btnLogOut.TabStop = False
+        '
         'Email
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(968, 663)
-        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.btnSendEmail)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.btnSendALL)
-        Me.Controls.Add(Me.btnSendEmail)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtBxBody)
         Me.Controls.Add(Me.Label5)
@@ -338,13 +334,15 @@ Partial Class Email
         Me.Controls.Add(Me.txtBxPassword)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtBxFrom)
-        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "Email"
         Me.Text = "Email"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.btnSendEmail, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnLogOut, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -353,8 +351,6 @@ Partial Class Email
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblAdminAccount As Label
     Friend WithEvents lblLoggedInAs As Label
-    Friend WithEvents btnLogOut As Button
-    Friend WithEvents btnBack As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents txtBxFrom As TextBox
     Friend WithEvents Label1 As Label
@@ -367,9 +363,11 @@ Partial Class Email
     Friend WithEvents txtBxSubject As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents txtBxBody As TextBox
-    Friend WithEvents btnSendEmail As Button
     Friend WithEvents btnSendALL As Button
     Friend WithEvents Label7 As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents btnLogOut As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnSendEmail As PictureBox
 End Class

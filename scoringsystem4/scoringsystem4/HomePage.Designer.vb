@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class HomePage
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,21 +20,35 @@ Partial Class HomePage
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomePage))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnScoreboard = New System.Windows.Forms.Button()
-        Me.btnEvents = New System.Windows.Forms.Button()
-        Me.btnMembers = New System.Windows.Forms.Button()
-        Me.btnTeams = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblAdminAccount = New System.Windows.Forms.Label()
         Me.lblLoggedInAs = New System.Windows.Forms.Label()
-        Me.btnLogOut = New System.Windows.Forms.Button()
-        Me.btnEmail = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
+        Me.btnLogOut = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.btnEmail = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.btnScore = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.btnLogOut, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnEmail, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnScore, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -48,78 +62,12 @@ Partial Class HomePage
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Home Page"
         '
-        'btnScoreboard
-        '
-        Me.btnScoreboard.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnScoreboard.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnScoreboard.FlatAppearance.BorderSize = 0
-        Me.btnScoreboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnScoreboard.ForeColor = System.Drawing.Color.White
-        Me.btnScoreboard.Location = New System.Drawing.Point(51, 154)
-        Me.btnScoreboard.Name = "btnScoreboard"
-        Me.btnScoreboard.Size = New System.Drawing.Size(200, 40)
-        Me.btnScoreboard.TabIndex = 10
-        Me.btnScoreboard.Text = "Scoreboard"
-        Me.btnScoreboard.UseVisualStyleBackColor = False
-        '
-        'btnEvents
-        '
-        Me.btnEvents.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnEvents.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEvents.FlatAppearance.BorderSize = 0
-        Me.btnEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEvents.ForeColor = System.Drawing.Color.White
-        Me.btnEvents.Location = New System.Drawing.Point(51, 200)
-        Me.btnEvents.Name = "btnEvents"
-        Me.btnEvents.Size = New System.Drawing.Size(200, 40)
-        Me.btnEvents.TabIndex = 11
-        Me.btnEvents.Text = "Events"
-        Me.btnEvents.UseVisualStyleBackColor = False
-        '
-        'btnMembers
-        '
-        Me.btnMembers.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnMembers.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMembers.FlatAppearance.BorderSize = 0
-        Me.btnMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMembers.ForeColor = System.Drawing.Color.White
-        Me.btnMembers.Location = New System.Drawing.Point(51, 246)
-        Me.btnMembers.Name = "btnMembers"
-        Me.btnMembers.Size = New System.Drawing.Size(200, 40)
-        Me.btnMembers.TabIndex = 12
-        Me.btnMembers.Text = "Members"
-        Me.btnMembers.UseVisualStyleBackColor = False
-        '
-        'btnTeams
-        '
-        Me.btnTeams.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnTeams.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnTeams.FlatAppearance.BorderSize = 0
-        Me.btnTeams.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTeams.ForeColor = System.Drawing.Color.White
-        Me.btnTeams.Location = New System.Drawing.Point(51, 292)
-        Me.btnTeams.Name = "btnTeams"
-        Me.btnTeams.Size = New System.Drawing.Size(200, 40)
-        Me.btnTeams.TabIndex = 13
-        Me.btnTeams.Text = "Teams"
-        Me.btnTeams.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Image = Global.scoringsystem4.My.Resources.Resources.Event_Scoring_logos_white
-        Me.PictureBox1.Location = New System.Drawing.Point(356, 154)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(189, 103)
-        Me.PictureBox1.TabIndex = 9
-        Me.PictureBox1.TabStop = False
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.lblAdminAccount)
         Me.Panel1.Controls.Add(Me.lblLoggedInAs)
-        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Location = New System.Drawing.Point(-3, 433)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(596, 67)
@@ -147,33 +95,113 @@ Partial Class HomePage
         Me.lblLoggedInAs.TabIndex = 6
         Me.lblLoggedInAs.Text = "Logged in as [User]"
         '
+        'ImageList1
+        '
+        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        '
+        'ImageList2
+        '
+        Me.ImageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.ImageList2.ImageSize = New System.Drawing.Size(16, 16)
+        Me.ImageList2.TransparentColor = System.Drawing.Color.Transparent
+        '
         'btnLogOut
         '
-        Me.btnLogOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLogOut.FlatAppearance.BorderSize = 0
-        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.ForeColor = System.Drawing.Color.White
-        Me.btnLogOut.Location = New System.Drawing.Point(456, 14)
+        Me.btnLogOut.Image = Global.scoringsystem4.My.Resources.Resources.log_out
+        Me.btnLogOut.Location = New System.Drawing.Point(433, 14)
         Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(117, 38)
-        Me.btnLogOut.TabIndex = 4
-        Me.btnLogOut.Text = "Log Out"
-        Me.btnLogOut.UseVisualStyleBackColor = False
+        Me.btnLogOut.Size = New System.Drawing.Size(151, 38)
+        Me.btnLogOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnLogOut.TabIndex = 22
+        Me.btnLogOut.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Location = New System.Drawing.Point(-23, -46)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox6.TabIndex = 21
+        Me.PictureBox6.TabStop = False
         '
         'btnEmail
         '
-        Me.btnEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.btnEmail.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEmail.FlatAppearance.BorderSize = 0
-        Me.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEmail.ForeColor = System.Drawing.Color.White
+        Me.btnEmail.Image = Global.scoringsystem4.My.Resources.Resources.email
         Me.btnEmail.Location = New System.Drawing.Point(51, 338)
         Me.btnEmail.Name = "btnEmail"
-        Me.btnEmail.Size = New System.Drawing.Size(200, 40)
-        Me.btnEmail.TabIndex = 15
-        Me.btnEmail.Text = "Email"
-        Me.btnEmail.UseVisualStyleBackColor = False
+        Me.btnEmail.Size = New System.Drawing.Size(200, 43)
+        Me.btnEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnEmail.TabIndex = 20
+        Me.btnEmail.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox5.Image = Global.scoringsystem4.My.Resources.Resources.teams
+        Me.PictureBox5.Location = New System.Drawing.Point(51, 292)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(200, 40)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 19
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox4.Image = Global.scoringsystem4.My.Resources.Resources.members
+        Me.PictureBox4.Location = New System.Drawing.Point(51, 246)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(200, 40)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 18
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox3.Image = Global.scoringsystem4.My.Resources.Resources.events
+        Me.PictureBox3.Location = New System.Drawing.Point(51, 200)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(200, 40)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 17
+        Me.PictureBox3.TabStop = False
+        '
+        'btnScore
+        '
+        Me.btnScore.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnScore.Image = Global.scoringsystem4.My.Resources.Resources.scoreboard
+        Me.btnScore.Location = New System.Drawing.Point(51, 154)
+        Me.btnScore.Name = "btnScore"
+        Me.btnScore.Size = New System.Drawing.Size(200, 40)
+        Me.btnScore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnScore.TabIndex = 16
+        Me.btnScore.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Image = Global.scoringsystem4.My.Resources.Resources.ES
+        Me.PictureBox1.Location = New System.Drawing.Point(413, 226)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(95, 60)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(74, 163)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(36, 31)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 16
+        Me.PictureBox2.TabStop = False
         '
         'HomePage
         '
@@ -181,19 +209,28 @@ Partial Class HomePage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(593, 497)
+        Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.btnEmail)
+        Me.Controls.Add(Me.PictureBox5)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.btnScore)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.btnTeams)
-        Me.Controls.Add(Me.btnMembers)
-        Me.Controls.Add(Me.btnEvents)
-        Me.Controls.Add(Me.btnScoreboard)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "HomePage"
         Me.Text = "HomePage"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.btnLogOut, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnEmail, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnScore, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -201,13 +238,17 @@ Partial Class HomePage
 
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnScoreboard As Button
-    Friend WithEvents btnEvents As Button
-    Friend WithEvents btnMembers As Button
-    Friend WithEvents btnTeams As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblAdminAccount As Label
     Friend WithEvents lblLoggedInAs As Label
-    Friend WithEvents btnLogOut As Button
-    Friend WithEvents btnEmail As Button
+    Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents ImageList2 As ImageList
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents btnScore As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents btnEmail As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents btnLogOut As PictureBox
 End Class

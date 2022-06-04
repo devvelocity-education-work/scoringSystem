@@ -22,7 +22,112 @@ scoringsystem4
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:scoringsystem4.My.Resources.Resources.backbutton">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.Delete">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.email">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.ES">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:scoringsystem4.My.Resources.Resources.Event_Scoring_logos_white">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.events">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.events1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.forgotpa2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.forgotpa3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.forgotpa4">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.log_out">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.login">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.members">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.nextbutton">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.prevbutton">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.register">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.register1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.scoreboard">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.send_email">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.send_email1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.teams">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:scoringsystem4.My.Resources.Resources.update">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

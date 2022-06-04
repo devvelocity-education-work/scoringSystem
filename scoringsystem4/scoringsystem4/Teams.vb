@@ -26,16 +26,16 @@
 
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs)
         HomePage.Show()
         Me.Close()
     End Sub
 
-    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+    Private Sub btnLogOut_Click(sender As Object, e As EventArgs)
         If rcrdEditing = True Then
             If MessageBox.Show("Are you sure you want to log out? This will end 'New Record' and entered data will be lost", "Warning", MessageBoxButtons.YesNo) = DialogResult.Yes Then
                 rcrdEditing = False
@@ -100,8 +100,8 @@
 
     Private Sub Teams_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Open connection to the Access File / Database
-        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\U4 A2\scoringsystem4\Database\scoringSystemDatabase.accdb"
-        'con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\U4 A2\scoringsystem4\Database\scoringSystemDatabase.accdb"
+        'con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\U4 A2\scoringsystem4\Database\scoringSystemDatabase.accdb"
+        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\U4 A2\scoringsystem4\Database\scoringSystemDatabase.accdb"
         'con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=H:\scoringSystem4\scoringsystem4\Database\scoringSystemDatabase.accdb"
         con.Open()
         sql = "SELECT * FROM tblMembers"
@@ -216,13 +216,9 @@
             btnNewRecord.Cursor = Cursors.Hand
 
             btnUpdateRecord.Enabled = True
-            btnUpdateRecord.BackColor = Color.FromArgb(40, 80, 150)
-            btnUpdateRecord.ForeColor = Color.FromArgb(255, 255, 255)
             btnUpdateRecord.Cursor = Cursors.Hand
 
             btnDeleteRecord.Enabled = True
-            btnDeleteRecord.BackColor = Color.FromArgb(40, 80, 150)
-            btnDeleteRecord.ForeColor = Color.FromArgb(255, 255, 255)
             btnDeleteRecord.Cursor = Cursors.Hand
 
             btnRemove1.Enabled = True
@@ -263,13 +259,9 @@
             btnNewRecord.Cursor = Cursors.No
 
             btnUpdateRecord.Enabled = False
-            btnUpdateRecord.BackColor = Color.FromArgb(50, 50, 50)
-            btnUpdateRecord.ForeColor = Color.FromArgb(100, 100, 100)
             btnUpdateRecord.Cursor = Cursors.No
 
             btnDeleteRecord.Enabled = False
-            btnDeleteRecord.BackColor = Color.FromArgb(50, 50, 50)
-            btnDeleteRecord.ForeColor = Color.FromArgb(100, 100, 100)
             btnDeleteRecord.Cursor = Cursors.No
 
             btnRemove1.BackColor = Color.FromArgb(50, 50, 50)
@@ -479,23 +471,15 @@
             btnNewRecord.Text = "New Record"
 
             btnUpdateRecord.Enabled = True
-            btnUpdateRecord.BackColor = Color.FromArgb(40, 80, 150)
-            btnUpdateRecord.ForeColor = Color.FromArgb(255, 255, 255)
             btnUpdateRecord.Cursor = Cursors.Arrow
 
             btnDeleteRecord.Enabled = True
-            btnDeleteRecord.BackColor = Color.FromArgb(40, 80, 150)
-            btnDeleteRecord.ForeColor = Color.FromArgb(255, 255, 255)
             btnDeleteRecord.Cursor = Cursors.Arrow
 
             btnNextRecord.Enabled = True
-            btnNextRecord.BackColor = Color.FromArgb(40, 80, 150)
-            btnNextRecord.ForeColor = Color.FromArgb(255, 255, 255)
             btnNextRecord.Cursor = Cursors.Arrow
 
             btnPrevRecord.Enabled = True
-            btnPrevRecord.BackColor = Color.FromArgb(40, 80, 150)
-            btnPrevRecord.ForeColor = Color.FromArgb(255, 255, 255)
             btnPrevRecord.Cursor = Cursors.Arrow
 
             'set info to a data entry thats visible
@@ -551,20 +535,12 @@
                 txtBxGamePodium.Text = ""
                 txtBxGamesWon.Text = ""
 
-                btnUpdateRecord.BackColor = Color.FromArgb(50, 50, 50)
-                btnUpdateRecord.ForeColor = Color.FromArgb(100, 100, 100)
                 btnUpdateRecord.Enabled = False
 
-                btnDeleteRecord.BackColor = Color.FromArgb(50, 50, 50)
-                btnDeleteRecord.ForeColor = Color.FromArgb(100, 100, 100)
                 btnDeleteRecord.Enabled = False
 
-                btnNextRecord.BackColor = Color.FromArgb(50, 50, 50)
-                btnNextRecord.ForeColor = Color.FromArgb(100, 100, 100)
                 btnNextRecord.Enabled = False
 
-                btnPrevRecord.BackColor = Color.FromArgb(50, 50, 50)
-                btnPrevRecord.ForeColor = Color.FromArgb(100, 100, 100)
                 btnPrevRecord.Enabled = False
 
                 txtTeamID.Text = maxRows
@@ -578,20 +554,12 @@
                 btnAddRecord.ForeColor = Color.FromArgb(100, 100, 100)
 
                 btnNextRecord.Enabled = True
-                btnNextRecord.BackColor = Color.FromArgb(40, 80, 150)
-                btnNextRecord.ForeColor = Color.FromArgb(255, 255, 255)
 
                 btnPrevRecord.Enabled = True
-                btnPrevRecord.BackColor = Color.FromArgb(40, 80, 150)
-                btnPrevRecord.ForeColor = Color.FromArgb(255, 255, 255)
 
                 btnUpdateRecord.Enabled = True
-                btnUpdateRecord.BackColor = Color.FromArgb(40, 80, 150)
-                btnUpdateRecord.ForeColor = Color.FromArgb(255, 255, 255)
 
                 btnDeleteRecord.Enabled = True
-                btnDeleteRecord.BackColor = Color.FromArgb(40, 80, 150)
-                btnDeleteRecord.ForeColor = Color.FromArgb(255, 255, 255)
 
                 rcrdEditing = False
                 GetTeamInfo()
@@ -615,7 +583,7 @@
 
     End Sub
 
-    Private Sub btnUpdateRecord_Click(sender As Object, e As EventArgs) Handles btnUpdateRecord.Click
+    Private Sub btnUpdateRecord_Click(sender As Object, e As EventArgs)
         If MessageBox.Show("Please confirm you would like to update this record - Warning: Any members already on a team will be overwritten if included in this record!", "Warning", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             dsTeams.Tables("DSTeams").Rows(teamsRow).Item(1) = txtBxTeamName.Text
             dsTeams.Tables("DSTeams").Rows(teamsRow).Item(2) = CInt(txtBxPoints.Text)
@@ -701,7 +669,7 @@
 
     End Sub
 
-    Private Sub btnDeleteRecord_Click(sender As Object, e As EventArgs) Handles btnDeleteRecord.Click
+    Private Sub btnDeleteRecord_Click(sender As Object, e As EventArgs)
         If MessageBox.Show("Delete this record from the database?", "Warning", MessageBoxButtons.YesNo) = DialogResult.Yes Then
 
             Dim intRowToDelete As Integer = teamsRow
@@ -749,7 +717,7 @@
         End If
     End Sub
 
-    Private Sub btnNextRecord_Click_1(sender As Object, e As EventArgs) Handles btnNextRecord.Click
+    Private Sub btnNextRecord_Click_1(sender As Object, e As EventArgs)
         If teamsRow = maxRows - 1 Then
             teamsRow = 1
         Else
@@ -758,7 +726,7 @@
         GetTeamInfo()
     End Sub
 
-    Private Sub btnPrevRecord_Click(sender As Object, e As EventArgs) Handles btnPrevRecord.Click
+    Private Sub btnPrevRecord_Click(sender As Object, e As EventArgs)
         If teamsRow = 1 Then
             teamsRow = maxRows - 1
         Else
@@ -786,5 +754,184 @@
     Private Sub btnRemove4_Click(sender As Object, e As EventArgs) Handles btnRemove4.Click
         cmbBxM4ID.Text = ""
         txtBxUserName4.Text = ""
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        If rcrdEditing = True Then
+            If MessageBox.Show("Are you sure you want to log out? This will end 'New Record' and entered data will be lost", "Warning", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                rcrdEditing = False
+                GetTeamInfo()
+                Me.Close()
+                Login.Show()
+                Login.txtBxUsername.Clear()
+                Login.txtBxPassword.Clear()
+            End If
+        Else
+            If MessageBox.Show("Are you sure you want to log out?", "Warning", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                rcrdEditing = False
+                GetTeamInfo()
+                Me.Close()
+
+                Login.Show()
+                Login.txtBxUsername.Clear()
+                Login.txtBxPassword.Clear()
+            End If
+        End If
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        HomePage.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNextRecord.Click
+        If teamsRow = maxRows - 1 Then
+            teamsRow = 1
+        Else
+            teamsRow = teamsRow + 1
+        End If
+        GetTeamInfo()
+    End Sub
+
+    Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrevRecord.Click
+        If teamsRow = 1 Then
+            teamsRow = maxRows - 1
+        Else
+            teamsRow = teamsRow - 1
+        End If
+        GetTeamInfo()
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdateRecord.Click
+        If MessageBox.Show("Please confirm you would like to update this record - Warning: Any members already on a team will be overwritten if included in this record!", "Warning", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            dsTeams.Tables("DSTeams").Rows(teamsRow).Item(1) = txtBxTeamName.Text
+            dsTeams.Tables("DSTeams").Rows(teamsRow).Item(2) = CInt(txtBxPoints.Text)
+            dsTeams.Tables("DSTeams").Rows(teamsRow).Item(3) = CInt(txtBxGamesWon.Text)
+            dsTeams.Tables("DSTeams").Rows(teamsRow).Item(4) = CInt(txtBxGamePodium.Text)
+
+            Try
+                dsTeams.Tables("DSTeams").Rows(teamsRow).Item(2) = txtBxPoints.Text
+            Catch ex As Exception
+                dsTeams.Tables("DSTeams").Rows(teamsRow).Item(2) = 0
+            End Try
+            Try
+                dsTeams.Tables("DSTeams").Rows(teamsRow).Item(3) = txtBxGamesWon.Text
+            Catch ex As Exception
+                dsTeams.Tables("DSTeams").Rows(teamsRow).Item(3) = 0
+            End Try
+            Try
+                dsTeams.Tables("DSTeams").Rows(teamsRow).Item(4) = txtBxGamePodium.Text
+            Catch ex As Exception
+                dsTeams.Tables("DSTeams").Rows(teamsRow).Item(4) = 0
+            End Try
+
+            For i = 0 To dsMembers.Tables("DSMembers").Rows.Count - 1
+                Try
+                    If dsMembers.Tables("DSMembers").Rows(i).Item(15) = txtTeamID.Text Then
+                        dsMembers.Tables("DSMembers").Rows(i).Item(15) = 0
+                    End If
+                Catch ex As Exception
+
+                End Try
+            Next
+
+            For i = 0 To dsMembers.Tables("DSMembers").Rows.Count - 1
+                Try
+                    If dsMembers.Tables("DSMembers").Rows(i).Item(0) = txtBxUserName1.Text Then
+                        dsMembers.Tables("DSMembers").Rows(i).Item(15) = txtTeamID.Text
+                    End If
+                Catch ex As Exception
+
+                End Try
+
+                Try
+                    If dsMembers.Tables("DSMembers").Rows(i).Item(0) = txtBxUserName2.Text Then
+                        dsMembers.Tables("DSMembers").Rows(i).Item(15) = txtTeamID.Text
+                    End If
+                Catch ex As Exception
+
+                End Try
+
+                Try
+                    If dsMembers.Tables("DSMembers").Rows(i).Item(0) = txtBxUserName3.Text Then
+                        dsMembers.Tables("DSMembers").Rows(i).Item(15) = txtTeamID.Text
+                    End If
+                Catch ex As Exception
+
+                End Try
+
+                Try
+                    If dsMembers.Tables("DSMembers").Rows(i).Item(0) = txtBxUserName4.Text Then
+                        dsMembers.Tables("DSMembers").Rows(i).Item(15) = txtTeamID.Text
+                    End If
+                Catch ex As Exception
+
+                End Try
+            Next
+
+            Dim cb As New OleDb.OleDbCommandBuilder(daTeams)
+            Dim cbMembers As New OleDb.OleDbCommandBuilder(daMembers)
+
+            'Add Prefix/Suffix
+            cb.QuotePrefix = "["
+            cb.QuoteSuffix = "]"
+            cbMembers.QuotePrefix = "["
+            cbMembers.QuoteSuffix = "]"
+
+            'Update Database
+            daTeams.Update(dsTeams, "DSTeams")
+            daMembers.Update(dsMembers, "DSMembers")
+
+            MsgBox("Team data has been updated")
+
+        End If
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDeleteRecord.Click
+        If MessageBox.Show("Delete this record from the database?", "Warning", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+
+            Dim intRowToDelete As Integer = teamsRow
+
+            Dim intIterate As Integer = 0
+
+            Dim cb As New OleDb.OleDbCommandBuilder(daTeams)
+
+
+            cb.QuotePrefix = "["
+            cb.QuoteSuffix = "]"
+            dsTeams.Tables("DSTeams").Rows(teamsRow).Delete()
+            daTeams.Update(dsTeams, "DSTeams")
+            dsTeams.AcceptChanges()
+
+            MsgBox("Team has been removed from the database")
+
+            Dim memberIDIndex As Integer
+            memberIDIndex = 0
+            Dim intForIndex As Integer
+
+            For intForIndex = 0 To dsTeams.Tables("DSTeams").Rows.Count - 1
+                dsTeams.Tables("DSTeams").Rows(intForIndex).Item(0) = intForIndex
+                memberIDIndex = memberIDIndex + 1
+            Next
+
+            teamsRow = teamsRow - 1
+
+            'set info to a data entry thats visible
+            If teamsRow = maxRows - 1 Then
+                teamsRow = 1
+            Else
+                teamsRow = teamsRow + 1
+            End If
+
+            If teamsRow = 1 Then
+                teamsRow = maxRows - 1
+            Else
+                teamsRow = teamsRow - 1
+            End If
+            GetTeamInfo()
+            'Count Members 
+
+            maxRows = maxRows - 1
+        End If
     End Sub
 End Class

@@ -12,7 +12,7 @@ Public Class Email
     Dim sql As String
     Dim emailAddress() As String
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs)
         Me.Close()
         HomePage.Show()
     End Sub
@@ -21,7 +21,7 @@ Public Class Email
     Private smtpSender As New SmtpClient
 
 
-    Private Sub btnSendEmail_Click(sender As Object, e As EventArgs) Handles btnSendEmail.Click
+    Private Sub btnSendEmail_Click(sender As Object, e As EventArgs)
         If toggleSendAll = True Then
             If txtBxFrom.Text = "" Then
                 MsgBox("'From' field cannot be blank")
@@ -146,12 +146,123 @@ Public Class Email
 
     End Sub
 
-    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+    Private Sub btnLogOut_Click(sender As Object, e As EventArgs)
         If MessageBox.Show("Are you sure you want to log out?", "Confirm", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             Login.Show()
             Login.txtBxUsername.Clear()
             Login.txtBxPassword.Clear()
             Me.Close()
         End If
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        If MessageBox.Show("Are you sure you want to log out?", "Confirm", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            Login.Show()
+            Login.txtBxUsername.Clear()
+            Login.txtBxPassword.Clear()
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Me.Close()
+        HomePage.Show()
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles btnSendEmail.Click
+        If toggleSendAll = True Then
+            If txtBxFrom.Text = "" Then
+                MsgBox("'From' field cannot be blank")
+            Else
+                If txtBxPassword.Text = "" Then
+                    MsgBox("'Password' field cannot be blank")
+                Else
+
+                    Try
+                        Dim myMsg As New MailMessage
+                        Dim smtpSender As New SmtpClient
+                        Dim attachment As System.Net.Mail.Attachment
+
+
+                        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\U4 A2\scoringsystem4\Database\scoringSystemDatabase.accdb"
+
+                        con.Open()
+
+
+                        sql = "SELECT MemberID, FN, LN, Email FROM Customer"
+
+                        da = New OleDb.OleDbDataAdapter(sql, con)
+
+                        Dim ds As New DataSet
+                        da.Fill(ds, "Members")
+
+                        con.Close()
+
+                        maxRows = ds.Tables("Members").Rows.Count
+                        ReDim emailAddress(maxRows - 1)
+
+                        For i = 0 To maxRows - 1
+                            emailAddress(i) = ds.Tables("Members").Rows(i).Item(3)
+                        Next
+
+
+                        myMsg.From = New MailAddress(txtBxFrom.Text.Trim)
+                        myMsg.To.Add(txtBxTo.Text.Trim)
+                        myMsg.Subject = txtBxBody.Text
+                        myMsg.Priority = MailPriority.Normal
+                        smtpSender.Credentials = New Net.NetworkCredential(txtBxFrom.Text.Trim, txtBxPassword.Text.Trim)
+                        smtpSender.EnableSsl = True
+                        smtpSender.Host = "smtp.live.com"
+                        smtpSender.Port = "587"
+                        attachment = New System.Net.Mail.Attachment(txtBxAttachment.Text.Trim)
+                        myMsg.Attachments.Add(attachment)
+
+                        For i = 0 To emailAddress.Length
+                            myMsg.To.Add(i)
+                            smtpSender.Send(myMsg)
+                        Next
+
+                        MsgBox("Mail sent")
+
+                    Catch ex As Exception
+                        MsgBox(ex.ToString)
+                    End Try
+                End If
+            End If
+        Else
+            If txtBxFrom.Text = "" Then
+                MsgBox("'From' field cannot be blank")
+            Else
+                If txtBxPassword.Text = "" Then
+                    MsgBox("'Password' field cannot be blank")
+                Else
+
+                    Try
+                        Dim myMsg As New MailMessage
+                        Dim smtpSender As New SmtpClient
+                        Dim attachment As System.Net.Mail.Attachment
+                        myMsg.From = New MailAddress(txtBxFrom.Text.Trim)
+                        myMsg.To.Add(txtBxTo.Text.Trim)
+                        myMsg.Subject = txtBxSubject.Text.Trim
+                        myMsg.Body = txtBxBody.Text.Trim
+                        myMsg.Priority = MailPriority.Normal
+                        smtpSender.Credentials = New Net.NetworkCredential(txtBxFrom.Text.Trim, txtBxPassword.Text.Trim)
+                        smtpSender.EnableSsl = True
+                        smtpSender.Host = "smtp.live.com"
+                        smtpSender.Port = 587
+                        If txtBxAttachment.Text <> "" Then
+                            attachment = New System.Net.Mail.Attachment(txtBxAttachment.Text.Trim)
+                            myMsg.Attachments.Add(attachment)
+                        End If
+                        smtpSender.Send(myMsg)
+                        MsgBox("Mail sent")
+
+                    Catch ex As Exception
+                        MsgBox(ex.ToString)
+                    End Try
+                End If
+            End If
+        End If
+
     End Sub
 End Class

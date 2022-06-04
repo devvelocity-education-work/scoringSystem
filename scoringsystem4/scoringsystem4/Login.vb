@@ -23,8 +23,8 @@
 
     Private Sub Events_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Open connection to the Access File / Database
-        'con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\U4 A2\scoringsystem4\Database\scoringSystemDatabase.accdb"
-        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\U4 A2\scoringsystem4\Database\scoringSystemDatabase.accdb"
+        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\U4 A2\scoringsystem4\Database\scoringSystemDatabase.accdb"
+        'con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\U4 A2\scoringsystem4\Database\scoringSystemDatabase.accdb"
         'con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=H:\scoringSystem4\scoringsystem4\Database\scoringSystemDatabase.accdb"
         con.Open()
         ' SQL command to fetch data from the database
@@ -138,12 +138,103 @@
         forgotpassword.Show()
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         Register.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) 
+        If txtBxPassword.Text = "" Or txtBxUsername.Text = "" Then
+            MsgBox("Please enter a email and password")
+        Else
+            Dim boolUNameFound = False
+            Dim boolPWordFound = False
+
+            For i = 0 To ds.Tables("DSStudents").Rows.Count - 1
+                If ds.Tables("DSStudents").Rows(i).Item(4) = txtBxUsername.Text Then
+                    boolUNameFound = True
+                    If ds.Tables("DSStudents").Rows(i).Item(2) = txtBxPassword.Text Then
+                        boolPWordFound = True
+                        MsgBox("Welcome to the system")
+                        HomePage.Show()
+                        loggedInAs = ds.Tables("DSStudents").Rows(i).Item(1)
+                        HomePage.lblLoggedInAs.Text = "Logged in as " & loggedInAs
+                        Members.lblLoggedInAs.Text = "Logged in as " & loggedInAs
+                        Scoreboard.lblLoggedInAs.Text = "Logged in as " & loggedInAs
+                        Teams.lblLoggedInAs.Text = "Logged in as " & loggedInAs
+                        EventsPG.lblLoggedInAs.Text = "Logged in as " & loggedInAs
+                        Email.lblLoggedInAs.Text = "Logged in as " & loggedInAs
+
+                        If ds.Tables("DSStudents").Rows(i).Item(11) = True Then
+                            isAdminLoggedIn = True
+                            HomePage.btnEmail.Show()
+                        Else
+                            isAdminLoggedIn = False
+                            HomePage.btnEmail.Hide()
+                        End If
+
+                        Me.Hide()
+
+                    End If
+
+                End If
+
+
+            Next
+
+            If boolUNameFound = False Or boolPWordFound = False Then
+                MsgBox("Email/Password incorect, please double check and try again")
+            End If
+
+        End If
+
+        If isAdminLoggedIn = False Then
+            HomePage.lblAdminAccount.Text = ""
+            EventsPG.lblAdminAccount.Text = ""
+            Teams.lblAdminAccount.Text = ""
+            Scoreboard.lblAdminAccount.Text = ""
+            Email.lblAdminAccount.Text = ""
+            EventsPG.lblAdminAccount.Text = ""
+            Members.lblAdminAccount.Text = ""
+            HomePage.lblLoggedInAs.Location = New Point(HomePage.lblLoggedInAs.Location.X, 23)
+            EventsPG.lblLoggedInAs.Location = New Point(EventsPG.lblLoggedInAs.Location.X, 23)
+            Teams.lblLoggedInAs.Location = New Point(Teams.lblLoggedInAs.Location.X, 23)
+            Scoreboard.lblLoggedInAs.Location = New Point(Scoreboard.lblLoggedInAs.Location.X, 23)
+            Email.lblLoggedInAs.Location = New Point(Email.lblLoggedInAs.Location.X, 23)
+            EventsPG.lblLoggedInAs.Location = New Point(EventsPG.lblLoggedInAs.Location.X, 23)
+            Members.lblLoggedInAs.Location = New Point(Members.lblLoggedInAs.Location.X, 23)
+        Else
+            HomePage.lblAdminAccount.Text = "[ Admin Account ]"
+            EventsPG.lblAdminAccount.Text = "[ Admin Account ]"
+            Teams.lblAdminAccount.Text = "[ Admin Account ]"
+            Scoreboard.lblAdminAccount.Text = "[ Admin Account ]"
+            Email.lblAdminAccount.Text = "[ Admin Account ]"
+            EventsPG.lblAdminAccount.Text = "[ Admin Account ]"
+            Members.lblAdminAccount.Text = "[ Admin Account ]"
+
+            HomePage.lblLoggedInAs.Location = New Point(HomePage.lblLoggedInAs.Location.X, 14)
+            EventsPG.lblLoggedInAs.Location = New Point(EventsPG.lblLoggedInAs.Location.X, 14)
+            Teams.lblLoggedInAs.Location = New Point(Teams.lblLoggedInAs.Location.X, 14)
+            Scoreboard.lblLoggedInAs.Location = New Point(Scoreboard.lblLoggedInAs.Location.X, 14)
+            Email.lblLoggedInAs.Location = New Point(Email.lblLoggedInAs.Location.X, 14)
+            EventsPG.lblLoggedInAs.Location = New Point(EventsPG.lblLoggedInAs.Location.X, 14)
+            Members.lblLoggedInAs.Location = New Point(Members.lblLoggedInAs.Location.X, 14)
+
+
+        End If
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) 
+        Register.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) 
+        forgotpassword.Show()
         Me.Hide()
     End Sub
 End Class

@@ -12,12 +12,12 @@
 
     Dim intMembers As Integer
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Login.Show()
     End Sub
 
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs)
         Dim found As Boolean = False
 
         For i = 0 To maxRows - 1
@@ -59,5 +59,27 @@
 
 
 
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Me.Hide()
+        Login.Show()
+    End Sub
+
+    Private Sub btnSendEmail_Click(sender As Object, e As EventArgs) Handles btnSendEmail.Click
+        Dim found As Boolean = False
+
+        For i = 0 To maxRows - 1
+            If ds.Tables("DSMembers").Rows(i).Item(4) = txtBxEmail.Text Then
+                MsgBox("Password email has been sent")
+                found = True
+                ' code to send a reset password email here
+                Exit For
+            End If
+        Next
+
+        If found = False Then
+            MsgBox("Your email was not found as an account registered")
+        End If
     End Sub
 End Class

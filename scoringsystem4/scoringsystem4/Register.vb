@@ -10,7 +10,7 @@
     Dim intMembers As Integer
 
     Dim curRow As Integer
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs)
         Login.Show()
         Me.Close()
     End Sub
@@ -46,7 +46,7 @@
 
     End Sub
 
-    Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+    Private Sub btnRegister_Click(sender As Object, e As EventArgs)
         If txtBxPassword.Text = txtBxPasswordConfirm.Text And txtBxEmail.Text <> "" And txtBxUsername.Text <> "" And txtBxFirstName.Text <> "" And txtBxLastName.Text <> "" Then
             If Len(txtBxPassword.Text) >= 8 Then
 
@@ -161,5 +161,93 @@
 
     Private Sub txtBxEmergencyContact_TextChanged(sender As Object, e As EventArgs) Handles txtBxEmergencyContact.TextChanged
 
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Login.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        If txtBxPassword.Text = txtBxPasswordConfirm.Text And txtBxEmail.Text <> "" And txtBxUsername.Text <> "" And txtBxFirstName.Text <> "" And txtBxLastName.Text <> "" Then
+            If Len(txtBxPassword.Text) >= 8 Then
+
+            Else
+                MsgBox("Password must be 8 characters")
+                Exit Sub
+            End If
+
+            For i = 0 To ds.Tables("DSMembers").Rows.Count - 1
+                If ds.Tables("DSMembers").Rows(i).Item(4) = txtBxEmail.Text Then
+                    MsgBox("Email already exists!")
+                    Exit Sub
+                End If
+            Next
+
+            For i = 0 To ds.Tables("DSMembers").Rows.Count - 1
+                If ds.Tables("DSMembers").Rows(i).Item(1) = txtBxUsername.Text Then
+                    MsgBox("Username already exists!")
+                    Exit Sub
+                End If
+            Next
+
+
+            Dim cbuilder As New OleDb.OleDbCommandBuilder(da)
+            Dim dsNewRow As DataRow
+            dsNewRow = ds.Tables("DSMembers").NewRow()
+
+            dsNewRow.Item("MemberID") = maxRows + 1
+            dsNewRow.Item("Username") = txtBxUsername.Text
+            dsNewRow.Item("Password") = txtBxPassword.Text
+            dsNewRow.Item("DateOfBirth") = DOBPicker.Text
+            dsNewRow.Item("Email") = txtBxEmail.Text
+            dsNewRow.Item("Mobile") = txtBxMobile.Text
+            dsNewRow.Item("FN") = txtBxFirstName.Text
+            dsNewRow.Item("LN") = txtBxLastName.Text
+            dsNewRow.Item("Gender") = cmbGender.Text
+            dsNewRow.Item("EmergencyContact") = txtBxEmergencyContact.Text
+            dsNewRow.Item("Address") = txtBxAddress.Text
+            dsNewRow.Item("Points") = 0
+            dsNewRow.Item("GamesWon") = 0
+            dsNewRow.Item("GamesOnPodium") = 0
+            dsNewRow.Item("TeamID") = 0
+            dsNewRow.Item("MedicalConditions") = txtBxMedical.Text
+
+            ds.Tables("DSMembers").Rows.Add(dsNewRow)
+
+            'Add Prefix/Suffix
+            cbuilder.QuotePrefix = "["
+            cbuilder.QuoteSuffix = "]"
+
+            'Update Database
+            da.Update(ds, "DSMembers")
+
+            MsgBox("You have now registered as " & txtBxUsername.Text)
+
+            txtBxUsername.Clear()
+            txtBxPassword.Clear()
+            txtBxEmail.Clear()
+            txtBxFirstName.Clear()
+            txtBxLastName.Clear()
+            txtBxMedical.Clear()
+            txtBxAddress.Clear()
+            cmbGender.Text = ""
+            DOBPicker.ResetText()
+            txtBxEmergencyContact.Clear()
+            txtBxMobile.Clear()
+            txtBxEmail.Clear()
+
+            Login.Show()
+            Me.Hide()
+            'Count Members 
+            intMembers = ds.Tables("DSMembers").Rows.Count
+
+            maxRows = maxRows + 1
+
+
+
+        Else
+            MsgBox("Username, Email, First Name and Last Name must be present. Passwords must also match, please try again.")
+        End If
     End Sub
 End Class

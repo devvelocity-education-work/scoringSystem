@@ -23,15 +23,9 @@ Partial Class EventsPG
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnBack = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtBxRecordID = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.btnDeleteRecord = New System.Windows.Forms.Button()
-        Me.btnUpdateRecord = New System.Windows.Forms.Button()
         Me.btnAddRecord = New System.Windows.Forms.Button()
-        Me.btnPrevRecord = New System.Windows.Forms.Button()
-        Me.btnNextRecord = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtBxEventName = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -47,9 +41,21 @@ Partial Class EventsPG
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblAdminAccount = New System.Windows.Forms.Label()
         Me.lblLoggedInAs = New System.Windows.Forms.Label()
-        Me.btnLogOut = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnDeleteRecord = New System.Windows.Forms.PictureBox()
+        Me.btnUpdateRecord = New System.Windows.Forms.PictureBox()
+        Me.btnPrevRecord = New System.Windows.Forms.PictureBox()
+        Me.btnNextRecord = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnLogOut = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.btnDeleteRecord, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnUpdateRecord, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnPrevRecord, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnNextRecord, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnLogOut, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -62,30 +68,6 @@ Partial Class EventsPG
         Me.Label1.Size = New System.Drawing.Size(116, 45)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Events"
-        '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBack.FlatAppearance.BorderSize = 0
-        Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.ForeColor = System.Drawing.Color.White
-        Me.btnBack.Location = New System.Drawing.Point(42, 42)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(117, 23)
-        Me.btnBack.TabIndex = 8
-        Me.btnBack.Text = "< Back"
-        Me.btnBack.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Image = Global.scoringsystem4.My.Resources.Resources.Event_Scoring_logos_white
-        Me.PictureBox1.Location = New System.Drawing.Point(399, 42)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(189, 103)
-        Me.PictureBox1.TabIndex = 9
-        Me.PictureBox1.TabStop = False
         '
         'txtBxRecordID
         '
@@ -113,34 +95,6 @@ Partial Class EventsPG
         Me.Label14.Text = "Event ID"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btnDeleteRecord
-        '
-        Me.btnDeleteRecord.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnDeleteRecord.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnDeleteRecord.FlatAppearance.BorderSize = 0
-        Me.btnDeleteRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDeleteRecord.ForeColor = System.Drawing.Color.White
-        Me.btnDeleteRecord.Location = New System.Drawing.Point(471, 373)
-        Me.btnDeleteRecord.Name = "btnDeleteRecord"
-        Me.btnDeleteRecord.Size = New System.Drawing.Size(117, 23)
-        Me.btnDeleteRecord.TabIndex = 57
-        Me.btnDeleteRecord.Text = "Delete Record"
-        Me.btnDeleteRecord.UseVisualStyleBackColor = False
-        '
-        'btnUpdateRecord
-        '
-        Me.btnUpdateRecord.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnUpdateRecord.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnUpdateRecord.FlatAppearance.BorderSize = 0
-        Me.btnUpdateRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUpdateRecord.ForeColor = System.Drawing.Color.White
-        Me.btnUpdateRecord.Location = New System.Drawing.Point(471, 344)
-        Me.btnUpdateRecord.Name = "btnUpdateRecord"
-        Me.btnUpdateRecord.Size = New System.Drawing.Size(117, 23)
-        Me.btnUpdateRecord.TabIndex = 56
-        Me.btnUpdateRecord.Text = "Update Record"
-        Me.btnUpdateRecord.UseVisualStyleBackColor = False
-        '
         'btnAddRecord
         '
         Me.btnAddRecord.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
@@ -155,34 +109,6 @@ Partial Class EventsPG
         Me.btnAddRecord.TabIndex = 55
         Me.btnAddRecord.Text = "Add Record"
         Me.btnAddRecord.UseVisualStyleBackColor = False
-        '
-        'btnPrevRecord
-        '
-        Me.btnPrevRecord.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnPrevRecord.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnPrevRecord.FlatAppearance.BorderSize = 0
-        Me.btnPrevRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrevRecord.ForeColor = System.Drawing.Color.White
-        Me.btnPrevRecord.Location = New System.Drawing.Point(471, 286)
-        Me.btnPrevRecord.Name = "btnPrevRecord"
-        Me.btnPrevRecord.Size = New System.Drawing.Size(117, 23)
-        Me.btnPrevRecord.TabIndex = 54
-        Me.btnPrevRecord.Text = "Prev Record"
-        Me.btnPrevRecord.UseVisualStyleBackColor = False
-        '
-        'btnNextRecord
-        '
-        Me.btnNextRecord.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnNextRecord.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnNextRecord.FlatAppearance.BorderSize = 0
-        Me.btnNextRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNextRecord.ForeColor = System.Drawing.Color.White
-        Me.btnNextRecord.Location = New System.Drawing.Point(471, 257)
-        Me.btnNextRecord.Name = "btnNextRecord"
-        Me.btnNextRecord.Size = New System.Drawing.Size(117, 23)
-        Me.btnNextRecord.TabIndex = 53
-        Me.btnNextRecord.Text = "Next Record"
-        Me.btnNextRecord.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -321,9 +247,9 @@ Partial Class EventsPG
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.lblAdminAccount)
         Me.Panel1.Controls.Add(Me.lblLoggedInAs)
-        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Location = New System.Drawing.Point(0, 616)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(631, 68)
@@ -351,19 +277,79 @@ Partial Class EventsPG
         Me.lblLoggedInAs.TabIndex = 6
         Me.lblLoggedInAs.Text = "Logged in as [User]"
         '
+        'btnDeleteRecord
+        '
+        Me.btnDeleteRecord.Image = Global.scoringsystem4.My.Resources.Resources.Delete
+        Me.btnDeleteRecord.Location = New System.Drawing.Point(471, 380)
+        Me.btnDeleteRecord.Name = "btnDeleteRecord"
+        Me.btnDeleteRecord.Size = New System.Drawing.Size(117, 30)
+        Me.btnDeleteRecord.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnDeleteRecord.TabIndex = 99
+        Me.btnDeleteRecord.TabStop = False
+        '
+        'btnUpdateRecord
+        '
+        Me.btnUpdateRecord.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnUpdateRecord.Image = Global.scoringsystem4.My.Resources.Resources.update
+        Me.btnUpdateRecord.Location = New System.Drawing.Point(471, 344)
+        Me.btnUpdateRecord.Name = "btnUpdateRecord"
+        Me.btnUpdateRecord.Size = New System.Drawing.Size(117, 30)
+        Me.btnUpdateRecord.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnUpdateRecord.TabIndex = 98
+        Me.btnUpdateRecord.TabStop = False
+        '
+        'btnPrevRecord
+        '
+        Me.btnPrevRecord.Image = Global.scoringsystem4.My.Resources.Resources.prevbutton
+        Me.btnPrevRecord.Location = New System.Drawing.Point(471, 286)
+        Me.btnPrevRecord.Name = "btnPrevRecord"
+        Me.btnPrevRecord.Size = New System.Drawing.Size(117, 28)
+        Me.btnPrevRecord.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnPrevRecord.TabIndex = 97
+        Me.btnPrevRecord.TabStop = False
+        '
+        'btnNextRecord
+        '
+        Me.btnNextRecord.Image = Global.scoringsystem4.My.Resources.Resources.nextbutton
+        Me.btnNextRecord.Location = New System.Drawing.Point(471, 252)
+        Me.btnNextRecord.Name = "btnNextRecord"
+        Me.btnNextRecord.Size = New System.Drawing.Size(117, 28)
+        Me.btnNextRecord.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnNextRecord.TabIndex = 96
+        Me.btnNextRecord.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = Global.scoringsystem4.My.Resources.Resources.backbutton
+        Me.PictureBox2.Location = New System.Drawing.Point(42, 41)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(117, 26)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 95
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Image = Global.scoringsystem4.My.Resources.Resources.ES
+        Me.PictureBox1.Location = New System.Drawing.Point(481, 79)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(95, 60)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 82
+        Me.PictureBox1.TabStop = False
+        '
         'btnLogOut
         '
-        Me.btnLogOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLogOut.FlatAppearance.BorderSize = 0
-        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.ForeColor = System.Drawing.Color.White
-        Me.btnLogOut.Location = New System.Drawing.Point(491, 14)
+        Me.btnLogOut.Image = Global.scoringsystem4.My.Resources.Resources.log_out
+        Me.btnLogOut.Location = New System.Drawing.Point(466, 14)
         Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(117, 38)
-        Me.btnLogOut.TabIndex = 4
-        Me.btnLogOut.Text = "Log Out"
-        Me.btnLogOut.UseVisualStyleBackColor = False
+        Me.btnLogOut.Size = New System.Drawing.Size(151, 38)
+        Me.btnLogOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnLogOut.TabIndex = 83
+        Me.btnLogOut.TabStop = False
         '
         'EventsPG
         '
@@ -371,6 +357,12 @@ Partial Class EventsPG
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(629, 683)
+        Me.Controls.Add(Me.btnDeleteRecord)
+        Me.Controls.Add(Me.btnUpdateRecord)
+        Me.Controls.Add(Me.btnPrevRecord)
+        Me.Controls.Add(Me.btnNextRecord)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.dtEventDate)
         Me.Controls.Add(Me.btnNewRecord)
@@ -384,35 +376,29 @@ Partial Class EventsPG
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtBxRecordID)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.btnDeleteRecord)
-        Me.Controls.Add(Me.btnUpdateRecord)
         Me.Controls.Add(Me.btnAddRecord)
-        Me.Controls.Add(Me.btnPrevRecord)
-        Me.Controls.Add(Me.btnNextRecord)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtBxEventName)
-        Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "EventsPG"
         Me.Text = "LoginReg"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.btnDeleteRecord, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnUpdateRecord, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnPrevRecord, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnNextRecord, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnLogOut, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnBack As Button
     Friend WithEvents txtBxRecordID As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents btnDeleteRecord As Button
-    Friend WithEvents btnUpdateRecord As Button
     Friend WithEvents btnAddRecord As Button
-    Friend WithEvents btnPrevRecord As Button
-    Friend WithEvents btnNextRecord As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents txtBxEventName As TextBox
     Friend WithEvents Label3 As Label
@@ -428,5 +414,11 @@ Partial Class EventsPG
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblAdminAccount As Label
     Friend WithEvents lblLoggedInAs As Label
-    Friend WithEvents btnLogOut As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnLogOut As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents btnNextRecord As PictureBox
+    Friend WithEvents btnPrevRecord As PictureBox
+    Friend WithEvents btnUpdateRecord As PictureBox
+    Friend WithEvents btnDeleteRecord As PictureBox
 End Class
